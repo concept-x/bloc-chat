@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html ng-app="blocChatEe">
 <html>
 <head lang="en">
     <meta charset="UTF-8">
@@ -6,7 +7,36 @@
     <link rel="stylesheet" href="/styles/main.css">
 </head>
 <body>
-    <h4>Hello, World???</h4>
-    <script src="/scripts/app.js"></script>
+  <ui-view></ui-view>
+
+  <!--Firebase-->
+  <script src="https://www.gstatic.com/firebasejs/4.4.0/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyBGVprBsoOle48MP8-e9Llz4ulJSnCvmsA",
+      authDomain: "bloc-chat-ee.firebaseapp.com",
+      databaseURL: "https://bloc-chat-ee.firebaseio.com",
+      projectId: "bloc-chat-ee",
+      storageBucket: "",
+      messagingSenderId: "760968274347"
+    };
+    firebase.initializeApp(config);
+  </script>
+
+  <!-- Angular -->
+   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
+   <!-- AngularUI Router -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.min.js"></script>
+
+   <!-- FireBase -->
+   <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+
+    <!-- AngularFire -->
+   <script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
+
+    <!-- Application Files -->
+   <script src="/scripts/app.js"></script>
 </body>
 </html>
