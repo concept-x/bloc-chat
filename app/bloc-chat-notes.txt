@@ -1,0 +1,13 @@
+Per Case Studies reference, this guy's dribbble is active but the live
+ version of the site is not; this domain is for sale.
+-http://www.julienrenvoye.fr/corefx/
+
+Tues. Oct. 3 mtg
+--Carrie: icons not displaying on netlify deployment, says it's b/c ionicons
+ ss isn't secure, but it's https in index. What gives?
+
+**delete bloc frontend starter from local again; commit/push; check deploy
+ (volume/mute) -- if ok, merge w/master, commit, push again.
+
+**make new netlify project; connect w/angular repo: FAIL
+**FTP to conceptxonline.com; check out deploy
