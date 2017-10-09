@@ -3,11 +3,71 @@ Per Case Studies reference, this guy's dribbble is active but the live
 -http://www.julienrenvoye.fr/corefx/
 
 Tues. Oct. 3 mtg
---Carrie: icons not displaying on netlify deployment, says it's b/c ionicons
- ss isn't secure, but it's https in index. What gives?
 
 **delete bloc frontend starter from local again; commit/push; check deploy
- (volume/mute) -- if ok, merge w/master, commit, push again.
+ (volume/mute) -- if ok, merge w/master, commit, push again. DONE 10/7
 
-**make new netlify project; connect w/angular repo: FAIL
+**make new netlify project; connect w/angular repo: FAIL again 10/7
 **FTP to conceptxonline.com; check out deploy
+
+
+-a "stack trace" is all the calls that led to the error, line-by-line. It's 
+ on the left-hand side, usually in red (when error), and looks like this:
+  domElement.Node.call
+  window.Calendar.getEventsByDate
+  jQuery.event.dispatch
+
+ Error lines are on the right-hand side and looks like this:
+  filename.filetype.number
+  Rooms.js.1
+  index.html.35
+
+******
+Rooms.js
+
+(function() {
+    function Rooms($rootScope, Fixtures) {
+         var Rooms = {}; //wtf goes here and inside?
+
+         /*
+         * @desc currentAlbum from Fixtures
+         * @type {Object}???
+         */
+         var currentAlbum = Fixtures.getAlbum();
+       }
+
+       angular
+           .module('blocChatEe')
+           .factory('Rooms', ['$rootScope', 'Rooms', Rooms]);//'factory' is a recipe...???
+       })();
+
+************
+
+{{Room.rooms}} ...??? Now, where did {{this notation}} go? 
+
+
+Jams--
+app/assets, scripts, styles, templates, index.html
+ ..scripts/controllers, directives, filters, services, app.js
+  ...controllers/AlbumCtrl.js, CollectionCtrl.js, etc.
+
+ ..scripts/directives/seekBar.js
+
+ ..scripts/services/Fixtures.js, SongPlayer.js
+  *may not need filters*
+ 
+ ..templates/directives, album.html, collection.html, landing.html, player_bar.html
+  ...directives/seek_bar.html
+
+***********
+Chat--
+
+app/scripts, styles, templates, index.html
+ ..scripts/controllers, directives, services, app.js
+  ...controllers/HomeCtrl.js
+
+ ..scripts/directives/NOTHING HERE
+
+ ..scripts/services/Room.js
+
+ ..templates/home.html

@@ -1,1 +1,7 @@
- <h1>Bloc Chat Home Page</h1>
+ <h1>{{home.greeting}}</h1>
+ <ul>
+  <h4>Chat Room List</h4>
+  <li class="single-chat-room" ng-repeat="room in home.rooms">
+    <span>{{home.rooms}}</span>
+  </li>
+</ul>
