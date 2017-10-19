@@ -14,7 +14,7 @@
 
          return Obj;//allows us to access all rooms from anywhere Room gets injected
        }
-
+};
        angular
            .module('blocChatEe', 'angularModals')
            //**insert '$uibModal' below after $firebaseArray?*****
