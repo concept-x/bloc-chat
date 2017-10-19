@@ -12,13 +12,3 @@
 })();
 
 //Create 'room' argument passed into rooms.add method (in Room.js) here. How??
-
-//Below is the entirety of Carrie's HomeCtrl.js file.
-(function() {
-    function HomeCtrl() {
-        this.greeting = 'let\'s make some modals!'
-    }
-    angular
-        .module('angularModals')//need a new module called angularModals
-        .controller('HomeCtrl', [HomeCtrl])
-})()

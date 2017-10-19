@@ -9,6 +9,7 @@
         object.
     */
     function ModalCtrl($uibModal) {//$uibModal = service to open modal windows
+  //    this.greeting = 'let\'s make some modals!'; **don't need; keep greeting in HomeCtrl?**
         this.open = function() {//'this' = ModalCtrl or $uibModal??
             /*
                 in the future, we'll need to do something with this
@@ -18,6 +19,7 @@
                 to link our modal.html template with our
                 ModalInstanceCtrl.
             */
+
             var modalInstance = $uibModal.open({//modals have only one method: open, but...
                 templateUrl: '/templates/modal.html',//...they have lots of parameter options
                 controller: 'ModalInstanceCtrl as modalInstance'
@@ -28,4 +30,15 @@
     angular
         .module('blocChatEe', 'angularModals')
         .controller('ModalCtrl', ['$uibModal', '$firebaseArray', ModalCtrl])
-})()
+})();
+
+//Below is the entirety of Carrie's HomeCtrl.js file.
+/*(function() {
+    function HomeCtrl() {
+        this.greeting = 'let\'s make some modals!'
+    }
+    angular
+        .module('angularModals')//need a new module called angularModals
+        .controller('HomeCtrl', [HomeCtrl])
+})();*/
+//end Carrie's HomeCtrl.js file
