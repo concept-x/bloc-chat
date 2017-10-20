@@ -15,7 +15,7 @@
     }
 
     angular
-        .module('blocChatEe', 'angularModals')
-        .controller('ModalInstanceCtrl', ['$firebaseArray', '$uibModalInstance', ModalInstanceCtrl])
+        .module('blocChatEe')
+        .controller('ModalInstanceCtrl', ['$uibModalInstance', ModalInstanceCtrl])
         //('modal name', ['dependency array', ModalInstanceCtrl avail to other svcs ])
 })()

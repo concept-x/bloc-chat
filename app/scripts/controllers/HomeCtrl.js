@@ -6,8 +6,8 @@
     }
 
     angular
-        .module('blocChatEe', 'angularModals')
-        .controller('HomeCtrl', ['Room', '$firebaseArray', '$uibModalInstance', '$uibModal', HomeCtrl]);
+        .module('blocChatEe')
+        .controller('HomeCtrl', ['Room', HomeCtrl]);
         //inject UI Bootstrap into dep. array...how?? And what do we call it?
 })();
 

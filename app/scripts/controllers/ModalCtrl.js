@@ -28,8 +28,8 @@
         }
     }
     angular
-        .module('blocChatEe', 'angularModals')
-        .controller('ModalCtrl', ['$uibModal', '$firebaseArray', ModalCtrl])
+        .module('blocChatEe')
+        .controller('ModalCtrl', ['$uibModal', ModalCtrl])
 })();
 
 //Below is the entirety of Carrie's HomeCtrl.js file.
