@@ -20,11 +20,18 @@
                 url: '/',
                 controller: 'HomeCtrl as home',
                 templateUrl: '/templates/home.html'
-            });
+            })
+            
+            $stateProvider
+              .state('modal', {
+                url: '/',
+                controller: 'ModalCtrl as modal',
+                templateUrl: '/templates/modal.html'
+              });
     }
 
      angular
-         .module('blocChatEe', ['ui.router', 'ui.bootstrap.modal', 'firebase'])
+         .module('blocChatEe', ['ui.router', 'ui.bootstrap', 'firebase'])
          .config(config);
  })();
 //above: my file; below: found on interwebs

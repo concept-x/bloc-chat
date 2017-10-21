@@ -31,14 +31,3 @@
         .module('blocChatEe')
         .controller('ModalCtrl', ['$uibModal', ModalCtrl])
 })();
-
-//Below is the entirety of Carrie's HomeCtrl.js file.
-/*(function() {
-    function HomeCtrl() {
-        this.greeting = 'let\'s make some modals!'
-    }
-    angular
-        .module('angularModals')//need a new module called angularModals
-        .controller('HomeCtrl', [HomeCtrl])
-})();*/
-//end Carrie's HomeCtrl.js file
