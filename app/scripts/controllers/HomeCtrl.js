@@ -8,7 +8,7 @@
     angular
         .module('blocChatEe')
         .controller('HomeCtrl', ['Room', HomeCtrl]);
-        //inject UI Bootstrap into dep. array...how?? And what do we call it?
+        //injecting $uibModal into array will break layout
 })();
 
 //Create 'room' argument passed into rooms.add method (in Room.js) here. How??
