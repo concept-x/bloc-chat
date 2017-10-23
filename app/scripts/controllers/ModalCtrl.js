@@ -23,10 +23,18 @@
             var modalInstance = $uibModal.open({//modals have only one method: open, but...
                 templateUrl: '/templates/modal.html',//...they have lots of parameter options
                 controller: 'ModalInstanceCtrl as modalInstance'
+
             })
             console.log('modal opened')//msg to check functionality
+
+            modalInstance.result.then(function(room) {
+                Room.createNewRoom(room)
+                console.log(Room.all)
+            })
         }
+
     }
+
     angular
         .module('blocChatEe')
         .controller('ModalCtrl', ['$uibModal', ModalCtrl])

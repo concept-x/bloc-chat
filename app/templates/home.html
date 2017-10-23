@@ -1,4 +1,11 @@
 <!DOCTYPE html>
+<head>
+  <style>
+    body{
+      margin-left: 10px;
+    }
+  </style>
+</head>
 <body ng-app="blocChatEe" ng-controller="ModalCtrl">
  <h1>{{home.greeting}}</h1>
     <h4>Chat Room List</h4>
@@ -12,6 +19,9 @@
         <button type="button" class="btn btn-default" ng-click="modals.open()">New room</button>
   </div>
   <!--'modals' is what we just named our controller, so we open it with 'modals.open()'-->
+<!--******10/21 6p: will need input field for new info, array to push to, and somehow
+to link the firebase info (id/value pairs) to the input field*******-->
+
 
 <!--<a ui-sref="modal">
   <button class="btn" ng-click="open()">Open Modal</button>

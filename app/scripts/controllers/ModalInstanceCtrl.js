@@ -8,9 +8,14 @@
         this.cancel() is executed, which calls the $uibModalInstance
         service and dismisses the modal.
     */
+
     function ModalInstanceCtrl($uibModalInstance) {
         this.cancel = function() {
             $uibModalInstance.dismiss('dismiss')//'dismiss' parameter to close modal
+        }
+
+        this.ok = function() {
+            $uibModalInstance.close(this.room)
         }
     }
 

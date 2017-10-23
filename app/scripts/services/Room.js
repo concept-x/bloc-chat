@@ -11,10 +11,20 @@
            //use firebase $add method here
            rooms.$add(room);
          //end $add function
+
+/* IDK where this was really going*************
+rooms.$bindTo($scope, "data").then(function(){
+  console.log($scope.data);
+  $scope.data.foo = "New Room the First";
+  ref.set({foo: "New Room the First"});
+});
+******************/
+
+  //use firebase "update" method to add child/capture new room from modal?
 }
          return Obj;//allows us to access all rooms from anywhere Room gets injected
        }
-       
+
        angular
            .module('blocChatEe')
            //**insert '$uibModal' below after $firebaseArray?*****
