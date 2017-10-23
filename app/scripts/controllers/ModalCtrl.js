@@ -8,7 +8,7 @@
         open() method, passing optional values to it in a javascript
         object.
     */
-    function ModalCtrl($uibModal) {//$uibModal = service to open modal windows
+    function ModalCtrl($uibModal, Room) {//$uibModal = service to open modal windows
   //    this.greeting = 'let\'s make some modals!'; **don't need; keep greeting in HomeCtrl?**
         this.open = function() {//'this' = ModalCtrl or $uibModal??
             /*
@@ -28,7 +28,7 @@
             console.log('modal opened')//msg to check functionality
 
             modalInstance.result.then(function(room) {
-                Room.createNewRoom(room)
+                Room.add(room)
                 console.log(Room.all)
             })
         }
@@ -37,5 +37,5 @@
 
     angular
         .module('blocChatEe')
-        .controller('ModalCtrl', ['$uibModal', ModalCtrl])
+        .controller('ModalCtrl', ['$uibModal', 'Room', ModalCtrl])
 })();
