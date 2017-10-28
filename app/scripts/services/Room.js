@@ -8,8 +8,7 @@
          //will use ng-repeat later to iterate thru all the actual rooms in the array
 
          Obj.add = function(room) {
-           //use firebase $add method here
-           rooms.$add(room);
+           rooms.$add(room);//firebase $add method; adding new room to array
          //end $add function
 }
          return Obj;//allows us to access all rooms from anywhere Room gets injected

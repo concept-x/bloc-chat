@@ -1,0 +1,13 @@
+section{
+  margin-left: 20px;
+  background: #999999;
+  float: left;
+  width:30%;
+}
+
+main{
+  float:right;
+  background: #cdcdcd;
+  padding:0 30px;
+  width:55%;
+}

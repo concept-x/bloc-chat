@@ -1,13 +1,13 @@
 (function() {//interface between view (home.html) and service (Room.js)
-    function HomeCtrl(Room) {
+    function HomeCtrl(Room, $scope) {
       this.rooms = Room.all;
-      this.greeting = "Bloc Chat Home Page!!!";
+      $scope.greeting = "Bloc Chat Home Page!!!";
       //everything made in this controller must be inside this function, or else no accessibility
-    }
+    }//$scope = obj that lives in controller that we have access to in template.
 
     angular
         .module('blocChatEe')
-        .controller('HomeCtrl', ['Room', HomeCtrl]);
+        .controller('HomeCtrl', ['Room', '$scope', HomeCtrl]);
         //injecting $uibModal into array will break layout
 })();
 

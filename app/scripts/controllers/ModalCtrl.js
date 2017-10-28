@@ -1,6 +1,6 @@
 //Controller to open modal
 
-(function() {
+(function() {//starting parenthese needed so this compiles as a fn expression, not a declaration.
     /*
         our ModalCtrl listens for instructions from the button
         in home.html. once it gets instructions from the view, it
@@ -27,8 +27,9 @@
             })
             console.log('modal opened')//msg to check functionality
 
-            modalInstance.result.then(function(room) {
-                Room.add(room)
+            modalInstance.result.then(function(room) {//.result = whatever user passed into text field/new room name, aka 'promise'
+//.then = promise handler
+                Room.add(room)//referencing Room.js service, calling 'add' method
                 console.log(Room.all)
             })
         }

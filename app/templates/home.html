@@ -1,29 +1,28 @@
 <!DOCTYPE html>
 <head>
-  <style>
-    body{
-      margin-left: 10px;
-    }
-  </style>
+  <link rel="stylesheet" type="text/css" href="../main.css">
 </head>
 <body ng-app="blocChatEe" ng-controller="ModalCtrl">
- <h1>{{home.greeting}}</h1>
+  <section>
+ <h1>{{greeting}}</h1>
     <h4>Chat Room List</h4>
  <ul>
   <li class="single-chat-room" ng-repeat="room in home.rooms">
-    <span>{{room.$value}}</span>
+    <span>{{room.$value}}</span><!--$value = property of room; we're only displaying the value instead of all properties-->
   </li>
 </ul>
   <div ng-controller='ModalCtrl as modals'><!--****just this portion of the code
     will be controlled by the ModalCtrl controller*********-->
-        <button type="button" class="btn btn-default" ng-click="modals.open()">New room</button>
+        <button type="button" class="btn btn-default" ng-click="modals.open()">New room</button><!--using 'modals' alias here as we just defined above-->
   </div>
+</section>
   <!--'modals' is what we just named our controller, so we open it with 'modals.open()'-->
-<!--******10/21 6p: will need input field for new info, array to push to, and somehow
-to link the firebase info (id/value pairs) to the input field*******-->
 
-
-<!--<a ui-sref="modal">
-  <button class="btn" ng-click="open()">Open Modal</button>
-</a> *******link works but modal window doesn't pop; template view just switches to modal.html-->
+<main>
+  <h2>***Room 1***</h2>
+  <div class="msg-container">
+    <h5>***Username***</h5>
+    <p>***message text***</p>
+  </div>
+</main>
 </body>
