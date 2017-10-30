@@ -2,13 +2,14 @@
 <head>
   <link rel="stylesheet" type="text/css" href="../main.css">
 </head>
-<body ng-app="blocChatEe" ng-controller="ModalCtrl">
+<body ng-app="blocChatEe" ng-controller="ModalCtrl"><!--is this ng-controller declaration necessary given the almost identical one below?-->
   <section>
  <h1>{{greeting}}</h1>
     <h4>Chat Room List</h4>
  <ul>
   <li class="single-chat-room" ng-repeat="room in home.rooms">
-    <span>{{room.$value}}</span><!--$value = property of room; we're only displaying the value instead of all properties-->
+    <button type="button" class="btn btn-default room-list" ng-click="home.setCurrentRoom(room)">
+      <span>{{room.$value}}</span></button><!--$value = property of room; we're only displaying the value instead of all properties-->
   </li>
 </ul>
   <div ng-controller='ModalCtrl as modals'><!--****just this portion of the code
@@ -18,9 +19,10 @@
 </section>
   <!--'modals' is what we just named our controller, so we open it with 'modals.open()'-->
 
-<main>
+<main class="message-container">
   <h2>{{activeRoom}}</h2>
-  <div class="msg-container">
+  <div class="msg-content" ng-repeat="message in home.messages">
+    <!--ng-repeat shows 3 message placeholders atm-->
     <h5>***Username***</h5>
     <p>***message text***</p>
   </div>

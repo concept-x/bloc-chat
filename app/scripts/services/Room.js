@@ -10,7 +10,13 @@
          Obj.add = function(room) {
            rooms.$add(room);//firebase $add method; adding new room to array
          //end $add function
-}
+           }
+
+          function setCurrentRoom(room){//found online
+            home.currentRoom = room;
+            home.messages = Message.getByRoomId(home.currentRoom$id);
+          }//to set current room
+
          return Obj;//allows us to access all rooms from anywhere Room gets injected
        }
 

@@ -1,5 +1,10 @@
+.nav, .pagination, .carousel, .panel-title a {
+  cursor: pointer;
+}/*per uiBootstrap, necessary for some cursors to display*/
+
 section{
   margin-left: 20px;
+  padding:0 12px;
   background: #999999;
   float: left;
   width:30%;
@@ -11,3 +16,20 @@ main{
   padding:0 30px;
   width:55%;
 }
+.single-chat-room{
+  list-style-type:none;
+}
+
+a.room-list{
+color:black;
+padding:2px 5px;
+border:1px solid #770d03;
+}
+
+button.room-list{
+  width:50%;
+}
+/*.room-list:hover{
+  color:black;
+}*/
+/*add padding below the new room button*/

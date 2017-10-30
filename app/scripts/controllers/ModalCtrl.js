@@ -29,7 +29,7 @@
 
             modalInstance.result.then(function(room) {//.result = whatever user passed into text field/new room name, aka 'promise'
 //.then = promise handler
-                Room.add(room)//referencing Room.js service, calling 'add' method
+                Room.add(room)//referencing Room.js service, calling 'add' method, passing in room as parameter
                 console.log(Room.all)
             })
         }
