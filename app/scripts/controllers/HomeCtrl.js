@@ -4,8 +4,9 @@
       this.messages = Message.all;//????
       $scope.greeting = "Bloc Chat Home Page!!!";
       //everything made in this controller must be inside this function, or else no accessibility
-      $scope.activeRoom = null;//set activeRoom initially to null
+      $scope.activeRoom = null;//set activeRoom initially to null; user should click on the room they want to see
       //Active room header. Works, yay!!
+
 
       //$scope.messages = Messages.all?? found online
     }//$scope = obj that lives in controller that we have access to in template.

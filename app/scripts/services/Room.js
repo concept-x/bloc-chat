@@ -13,6 +13,7 @@
            }
 
           function setCurrentRoom(room){//found online
+            console.log(room);
             home.currentRoom = room;
             home.messages = Message.getByRoomId(home.currentRoom$id);
           }//to set current room
