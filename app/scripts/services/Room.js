@@ -1,6 +1,6 @@
 (function() {//Room.js is a service
     function Room($firebaseArray) {//firebaseArray is a dependency
-         var Obj = {};
+         var Obj = {};//room Object
          var ref = firebase.database().ref().child("rooms");//reference to firebaseArray raw data
          var rooms = $firebaseArray(ref);//turn into actual array called 'rooms'; will include room1, room2, etc.
 
@@ -17,7 +17,7 @@
             home.messages = Message.getByRoomId(home.currentRoom$id);
           }//to set current room
 
-         return Obj;//allows us to access all rooms from anywhere Room gets injected
+         return Obj;//return room Object; allows us to access all rooms from anywhere Room gets injected
        }
 
        angular

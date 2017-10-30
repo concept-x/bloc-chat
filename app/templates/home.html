@@ -23,8 +23,8 @@
   <h2>{{activeRoom}}</h2>
   <div class="msg-content" ng-repeat="message in home.messages">
     <!--ng-repeat shows 3 message placeholders atm-->
-    <h5>***Username***</h5>
-    <p>***message text***</p>
+    <h5>{{message.username}}</h5>
+    <p>{{message.content}}</p>
   </div>
 </main>
 </body>
