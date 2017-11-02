@@ -6,14 +6,6 @@
                 requireBase: false
              });
 
-/*
-        $stateProvider
-              .state('modal', {
-                url: '/',
-                controller: 'ModalCtrl as modal',
-                templateUrl: '/templates/modal.html'
-              })
-  */
   //adding above made modal.html show up, replacing home.html; still no modal window
         $stateProvider
             .state('home', {
@@ -21,14 +13,22 @@
                 controller: 'HomeCtrl as home',
                 templateUrl: '/templates/home.html'
             })
-
-          
     }
-
+/*
+    function BlocChatCookies($cookies) {
+        var currentUser = $cookies.get('blocChatCurrentUser');
+        if (!currentUser || currentUser === '') {
+          // Do something to allow users to set their username
+        }
+      }//pulled from first code example in bc cp5
+      //use modalctrl.js to look for guidance in inserting fn execution above; see lines 23-34 of modalctrl.js.
+*/
      angular
          .module('blocChatEe', ['ui.router', 'ui.bootstrap', 'firebase'])
-         .config(config);
+         .config(config)
+         .run(['$cookies', BlocChatCookies]);
  })();//adding dbl parentheses here didn't make a difference w/functionality
+
 
 //above: my file; below: found on interwebs
 /*
