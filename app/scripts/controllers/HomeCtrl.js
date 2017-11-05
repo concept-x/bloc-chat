@@ -24,5 +24,3 @@
         .controller('HomeCtrl', ['Room', 'Message', '$scope', HomeCtrl]);
         //injecting $uibModal into array will break layout
 })();
-
-//Create 'room' argument passed into rooms.add method (in Room.js) here. How??

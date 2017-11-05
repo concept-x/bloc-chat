@@ -9,7 +9,7 @@
         object.
     */
     function ModalCtrl($uibModal, Room) {//$uibModal = service to open modal windows
-  //    this.greeting = 'let\'s make some modals!'; **don't need; keep greeting in HomeCtrl?**
+
         this.open = function() {//'this' = ModalCtrl or $uibModal??
             /*
                 in the future, we'll need to do something with this

@@ -10,13 +10,13 @@
     */
 
     function ModalInstanceCtrl($uibModalInstance) {
-        this.cancel = function() {
+        this.cancel = function() {//.cancel quits modal without anything entered
             $uibModalInstance.dismiss('dismiss')//'dismiss' parameter to close modal
         }
 
         this.ok = function() {
             $uibModalInstance.close(this.room)
-        }
+        }//.close takes the string input and passes it back to ModalCtrl
     }
 
     angular

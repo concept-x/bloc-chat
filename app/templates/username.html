@@ -1,0 +1,22 @@
+<!--template for the modal window in checkpoint 5
+(Set username).
+**All we're doing is adding "modal-" classes to our html-->
+
+<div>
+    <div class="modal-header"><!--just a div with a class-->
+        <h2 class="modal-title">Set Username</h2><!--header with a class-->
+    </div>
+    <div class="modal-body">
+
+ <p>New chat room</p>
+        <form name="add-room" ng-submit="modalInstance.ok()">
+            <input class="form-control" ng-model="modalInstance.room" title="room" placeholder="Name your room" autofocus />
+            <!--<h3>{{modalInstance.room}}</h3>-->
+        </form>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary" type="button" ng-click="modalInstance.ok()">Add room</button>
+
+    </div>
+    
+</div>
