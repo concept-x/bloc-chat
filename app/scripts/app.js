@@ -14,7 +14,7 @@
             })
     }
 //below fn does ModalCtrl for username; don't need separate file.
-    function BlocChatCookies($cookies) {
+    function BlocChatCookies($cookies, $uibModal) {
         var currentUser = $cookies.get('blocChatCurrentUser');//currentUser var equals corresponding value in $cookie when .get method is called on key 'blocChatCurrentUser'
         if (!currentUser || currentUser === '') {//if no current user or current user = empty string
 
@@ -49,6 +49,7 @@ modalInstance.result.then(function(room) {//.result = whatever user passed into 
 
      angular
          .module('blocChatEe', ['ui.router', 'ui.bootstrap', 'firebase', 'ngCookies'])
+         .controller('UnInstanceCtrl', ['$uibModal', 'Room', UnInstanceCtrl])//change to fit
          .config(config)
          .run(['$cookies', BlocChatCookies]);//is this how we make the fn execute on page load?
  })();

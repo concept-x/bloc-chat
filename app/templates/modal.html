@@ -9,13 +9,13 @@ template is for the modal window in checkpoint 3
     <div class="modal-body">
 
  <p>New chat room</p>
-        <form name="add-room" ng-submit="modalInstance.ok()">
-            <input class="form-control" ng-model="modalInstance.room" title="room" placeholder="Name your room" autofocus />
+        <form name="add-username" ng-submit="modalInstance.ok()">
+            <input class="form-control" ng-model="modalInstance.room" title="room" placeholder="What shall we call you?" autofocus />
             <!--<h3>{{modalInstance.room}}</h3>-->
         </form>
     </div>
     <div class="modal-footer">
-        <button class="btn btn-primary" type="button" ng-click="modalInstance.ok()">Add room</button>
+        <button class="btn btn-primary" type="button" ng-click="modalInstance.ok()">Set Username</button>
 
     </div>
     <div class="modal-footer">
