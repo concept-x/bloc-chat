@@ -5,7 +5,7 @@
         of it.
     */
 
-    function UnModalInstanceCtrl($uibModalInstance) {
+    function UnInstanceCtrl($uibModalInstance) {
 //do I need uibUnModalInstance instead of uibModalInstance?
         this.ok = function(userName) {
             $uibModalInstance.close(userName)
