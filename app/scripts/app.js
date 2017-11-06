@@ -22,7 +22,7 @@
           var UnModalInstance = $uibModal.open({// Make modal window pop up
             currentUser: $cookies.put('blocChatCurrentUser'),//use put() to store username as value for key 'blocChatCurrentUser'
           templateUrl: '/templates/username.html',//link to modal template
-          controller: 'UnModalInstanceCtrl as UnModalInstance'//links controller to username.html template
+          controller: 'UnInstanceCtrl as UnInstanceCtrl'//links controller to username.html template
         });
 
         UnModalInstance.result.then(function(currentUser){//call .result.then on the entered string value (username) in the username modal window
@@ -49,7 +49,6 @@ modalInstance.result.then(function(room) {//.result = whatever user passed into 
 
      angular
          .module('blocChatEe', ['ui.router', 'ui.bootstrap', 'firebase', 'ngCookies'])
-         .controller('UnInstanceCtrl', ['$uibModal', 'Room', UnInstanceCtrl])//change to fit
          .config(config)
-         .run(['$cookies', BlocChatCookies]);//is this how we make the fn execute on page load?
+         .run(['$cookies', '$uibModal', BlocChatCookies]);//is this how we make the fn execute on page load?
  })();

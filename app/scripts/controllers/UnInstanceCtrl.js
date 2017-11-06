@@ -8,7 +8,7 @@
     function UnInstanceCtrl($uibModalInstance) {
 //do I need uibUnModalInstance instead of uibModalInstance?
         this.ok = function(userName) {
-            $uibModalInstance.close(userName)
+            $uibModalInstance.close(this.userName)
         }//.close takes the string input and passes it back to ModalCtrl
     }
 //***Make 'ok' button grayed out until something is entered in un field
