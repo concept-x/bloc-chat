@@ -1,7 +1,8 @@
 (function() {//interface between view (home.html) and service (Room.js)
-    function HomeCtrl(Room, Message, $scope) {
+    function HomeCtrl(Room, Message, $scope, $cookies) {
       this.rooms = Room.all;
-      this.messages = Message.all;//????
+      this.messages = Message.all;
+      this.userName = $cookies.get('blocChatCurrentUser');
       $scope.greeting = "Bloc Chat Home Page!!!";
       //everything made in this controller must be inside this function, or else no accessibility
       $scope.activeRoom = null;//set activeRoom initially to null; user should click on the room they want to see
@@ -21,6 +22,6 @@
 
     angular
         .module('blocChatEe')
-        .controller('HomeCtrl', ['Room', 'Message', '$scope', HomeCtrl]);
+        .controller('HomeCtrl', ['Room', 'Message', '$scope', '$cookies', HomeCtrl]);
         //injecting $uibModal into array will break layout
 })();

@@ -9,14 +9,17 @@
     <div class="modal-body">
 
  <p>New user? Pick a name.</p>
-        <form name="add-room" ng-submit="UnModalInstance.ok()">
-            <input class="form-control" ng-model="UnModalInstance.room" title="room" placeholder="What shall we call you?" autofocus />
-            <!--<h3>{{modalInstance.room}}</h3>-->
+        <form name="add-username" ng-submit="UnInstanceCtrl.ok()">
+          <!--ng-submit accepts input text and dismisses modal-->
+            <input class="form-control" ng-model="UnInstanceCtrl.userName"
+             title="room" placeholder="What shall we call you?" autofocus />
         </form>
     </div>
     <div class="modal-footer">
-        <button class="btn btn-primary" type="button" ng-click="UnModalInstance.ok()">Set Username</button>
+        <button class="btn btn-primary" type="button" ng-disabled="!UnInstanceCtrl.userName" ng-click="UnInstanceCtrl.ok()">Set Username</button>
 
     </div>
 
 </div>
+<!--Line 12, ng-model: "controller.input" to hand back off to cookie.put fn
+ ng-required="required" to require: doesn't work. Tried in a couple of places. Button still dismisses even if you enter no text. -->

@@ -1,14 +1,3 @@
-Per Case Studies reference, this guy's dribbble is active but the live
- version of the site is not; this domain is for sale.
--http://www.julienrenvoye.fr/corefx/
-
-Tues. Oct. 3 mtg
-
-**delete bloc frontend starter from local again; commit/push; check deploy
- (volume/mute) -- if ok, merge w/master, commit, push again. DONE 10/7
-
-**make new netlify project; connect w/angular repo: FAIL again 10/7
-**FTP to conceptxonline.com; check out deploy
 
 
 -a "stack trace" is all the calls that led to the error, line-by-line. It's 
@@ -71,3 +60,43 @@ app/scripts, styles, templates, index.html
  ..scripts/services/Room.js
 
  ..templates/home.html
+
+****************
+
+ckpoint 6 send messages
+
+first: 'send' method (in msgs.js; see assignment)
+
+4 props on message obj: msg content, username, roomId, timestamp
+
+msg content
+1. create alias inside homectrl that refers to method in messages.js to push/send
+  messages to firebase
+
+2. Create message input field in home.html 
+3. Capture msg input text w/homectrl to pass to messages.js
+4. From messages.js, push to firebase
+
+username
+--pull from cookie
+
+roomId
+--this.currentRoom already exists; use it
+
+timestamp
+--generate inside sendMessage method we're creating to do all this.
+date.now = built-in JS method; mock.TzDate = angular method (don't use), 
+or google 'firebase timestamp'
+
+second: create controller method for this via ng-click or ng-submit in homectrl
+  to hand off to messages.js
+third: add 'send' method to Messages.js to send to firebase
+
+C recommends build input field and send button, put an alert on the send
+ to prove the button works...next, make alert show input text to prove 
+ input is captured and controller and template are talking to each other
+-------------
+
+fix cp 5: username displayed on the top of page only when page refreshes, not 
+  as modal disappears. 
+

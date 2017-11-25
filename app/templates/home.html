@@ -21,10 +21,13 @@
 
 <main class="message-container">
   <h2>{{home.currentRoom.$value}}</h2><!--displays current room-->
+  <h4>Welcome, {{home.userName}}</h4>
+  <!--home.userName in a h2 or h3 to display un-->
   <div class="msg-content" ng-repeat="message in home.messages">
     <!--ng-repeat shows 3 message placeholders atm-->
     <h5>{{message.username}}</h5>
     <p>{{message.content}}</p>
+    <p>{{add timestamp here}}</p><!--also style -->
   </div>
 </main>
 </body>
