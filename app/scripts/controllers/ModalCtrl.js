@@ -10,7 +10,7 @@
     */
     function ModalCtrl($uibModal, Room) {//$uibModal = service to open modal windows
 
-        this.open = function() {//'this' = ModalCtrl or $uibModal??
+        this.open = function() {//'this' = controller
             /*
                 in the future, we'll need to do something with this
                 modalInstance variable in the ModalCtrl, but for now,

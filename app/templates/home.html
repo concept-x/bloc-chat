@@ -3,11 +3,12 @@
   <link rel="stylesheet" type="text/css" href="../main.css">
 </head>
 <body ng-app="blocChatEe" ng-controller="ModalCtrl"><!--is this ng-controller declaration necessary given the almost identical one below?-->
-  <section>
+  <section><!--chat room list sidebar-->
  <h1>{{greeting}}</h1>
     <h4>Chat Room List</h4>
  <ul>
   <li class="single-chat-room" ng-repeat="room in home.rooms">
+ <!--chat rooms are list items; ng-repeat iterates over the list until all items are enumerated-->
     <button type="button" class="btn btn-default room-list" ng-click="home.setCurrentRoom(room)">
       <span>{{room.$value}}</span></button><!--$value = property of room; we're only displaying the value instead of all properties-->
   </li>
@@ -27,7 +28,15 @@
     <!--ng-repeat shows 3 message placeholders atm-->
     <h5>{{message.username}}</h5>
     <p>{{message.content}}</p>
-    <p>{{add timestamp here}}</p><!--also style -->
+    <p>{{message.sentAt | date}}</p><!--also style -->
   </div>
+  <div class="msg-input"><!--New Message input-->
+    <form>
+      <label for="msg-input">Your message here</label>
+      <input type="textarea" name="newMessage"><br />
+      <input type="submit" value="Post!" ng-click="home.pushMessage(newMessage)">
+    </form>
+  </div>
+
 </main>
 </body>

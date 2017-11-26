@@ -10,6 +10,25 @@
       return $firebaseArray(ref.orderByChild('roomId').equalTo(roomId));
       //chain .orderByChild and .equalTo methods to firebaseArray ref to target a specific room by its roomID
     }
+//logic: target the roomId as the parent node of messages
+    Message.send = function(newMessage){
+      var sendMessage =  $firebaseArray(ref.orderByChild('roomId').equalTo(roomId).push(newMessage));
+//send method logic...ckpoint 6
+  /*  Message.send = function(newMessage){
+      messages.$add(newMessage);
+      newMessage.sentAt = firebase.database.ServerValue.TIMESTAMP;
+    }*/
+
+/*timestamp example
+      var sessionsRef = firebase.database().ref("sessions");
+      sessionsRef.push({
+        startedAt: firebase.database.ServerValue.TIMESTAMP
+      });
+//timestamp
+*/
+
+      //4 properties: content, un, roomId, timestamp
+    }
 
     return Message;//return the Message obj declared above
   }

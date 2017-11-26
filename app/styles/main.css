@@ -1,7 +1,9 @@
 .nav, .pagination, .carousel, .panel-title a {
   cursor: pointer;
 }/*per uiBootstrap, necessary for some cursors to display*/
-
+body{
+  height:100%;
+}
 section{
   margin-left: 20px;
   padding:0 12px;
@@ -28,6 +30,18 @@ border:1px solid #770d03;
 
 button.room-list{
   width:50%;
+}
+
+input[type=textarea]{
+  display:inline-block;
+  width:250px;
+  height:180px;
+}
+input[type=submit]{
+  display:inline-block;
+  border-radius:4px;
+  border:2px solid white;
+  margin-top:3px;
 }
 /*.room-list:hover{
   color:black;
