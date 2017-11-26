@@ -30,10 +30,10 @@
     <p>{{message.content}}</p>
     <p>{{message.sentAt | date}}</p><!--also style -->
   </div>
-  <div class="msg-input"><!--New Message input-->
+  <div class="msg-input" ng-controller='NewMsgCtrl as newmessage'><!--New Message input-->
     <form>
       <label for="msg-input">Your message here</label>
-      <input type="textarea" name="newMessage"><br />
+      <textarea rows="8" cols="20" name="newMessage"></textarea><br />
       <input type="submit" value="Post!" ng-click="home.pushMessage(newMessage)">
     </form>
   </div>
