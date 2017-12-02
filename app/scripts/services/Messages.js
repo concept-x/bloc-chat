@@ -13,10 +13,13 @@
 //logic: target the roomId as the parent node of messages
     Message.push = function(newMessage, activeRoom){
       //messages.$add(newMessage)
+      var message = {
+        //use property names from firebase; see w3schools obj reference page
       console.log($cookies.get('blocChatCurrentUser'));
       console.log(newMessage);
-      console.log(activeRoom);
-    }//this command should be 'push' b/c from here we're pushing to the firebase array
+      console.log(activeRoom.$id);
+      var timeStamp = new Date();
+    }}//this command should be 'push' b/c from here we're pushing to the firebase array
     //  var sendMessage =  $firebaseArray(ref.orderByChild('roomId').equalTo(roomId).push(newMessage));
 //send method logic...ckpoint 6
   /*  Message.send = function(newMessage){
@@ -36,7 +39,6 @@
 
     return Message;//return the Message obj declared above
   }
-
 
   angular
     .module('blocChatEe')
