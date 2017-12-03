@@ -10,14 +10,16 @@
       return $firebaseArray(ref.orderByChild('roomId').equalTo(roomId));
       //chain .orderByChild and .equalTo methods to firebaseArray ref to target a specific room by its roomID
     }
-//logic: target the roomId as the parent node of messages
+
     Message.push = function(newMessage, activeRoom){
-      //messages.$add(newMessage)
+      messages.$add(newMessage);
       console.log($cookies.get('blocChatCurrentUser'));
       console.log(newMessage);
       console.log(activeRoom);
     }//this command should be 'push' b/c from here we're pushing to the firebase array
-    //  var sendMessage =  $firebaseArray(ref.orderByChild('roomId').equalTo(roomId).push(newMessage));
+    // can we use messages.add(message) to write to fb like we did for new rooms?
+    /*Obj.add = function(room) {
+      rooms.$add(room);}*/
 //send method logic...ckpoint 6
   /*  Message.send = function(newMessage){
       messages.$add(newMessage);
