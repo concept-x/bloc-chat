@@ -28,9 +28,10 @@
 
       this.sendMessage = function(message){
         Message.push(message, $scope.activeRoom);
+//changing activeRoom to currentRoom = null vs. undefined
       }//when in a Controller use 'this' to reference the Controller object...
        //...the messages in HomeCtrl are saved in the messages property...
-       //...
+        //  var stringDate = Date.now().toDateString(); as suggested by Brady Sutton, throws error in Messages.js and breaks layout here.
     }//$scope = obj that lives in controller that we have access to in template.
 
     angular
