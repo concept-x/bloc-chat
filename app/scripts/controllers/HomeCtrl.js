@@ -6,8 +6,8 @@
       //pull userName from text in cookie
       $scope.greeting = "Bloc Chat Home Page!!!";
       //everything made in this controller must be inside this function, or else no accessibility
-      $scope.activeRoom = null;//set activeRoom initially to null; user should click on the room they want to see
-
+      $scope.activeRoom = null;//set activeRoom initially to null; user should click on the room they want to see. Then why is view defaulting to viewing the msgs in Tool?
+//probably because those are the only messages in the db atm...but no they're not...they're the only ones associated with a room, though.
 
       this.setCurrentRoom = function(room){
         console.log("Called :", room);
@@ -17,7 +17,7 @@
         console.log("This is the room id I passed to getRoomById: ", this.currentRoom.$id);
         this.messages = Message.getByRoomId(this.currentRoom.$id);
 
-
+//should I put a watcher on my scope so I can push the messages to firebase *and* have them show up in my currentRoom?
         //checkpoint 6:create alias inside homectrl that refers to method in messages.js to push/send messages to firebase
 
 
