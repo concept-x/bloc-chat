@@ -10,7 +10,23 @@
       return $firebaseArray(ref.orderByChild('roomId').equalTo(roomId));
       //chain .orderByChild and .equalTo methods to firebaseArray ref to target a specific room by its roomID
     }
-/*
+
+Message.push = function(newMessage, activeRoom, userName, stringDate){
+    var now = new Date;
+    var stringDate = now.toDateString();
+
+    var messageObject = {
+    		content: newMessage,
+    		roomId: activeRoom,
+    		username: ($cookies.get('blocChatCurrentUser')),
+    		time: stringDate
+      }
+      messages.$add(messageObject);
+    	};
+
+
+
+  /*
     var messageObject = {
       content: newMessage,
       roomId: home.currentRoom$id,
@@ -19,15 +35,16 @@
     }
     console.log(messageObject);
     messages.$add(messageObject);
-    */
-
+*/
+/*
     Message.push = function(newMessage, activeRoom, blocChatCurrentUser,  userName){
       messages.$add(newMessage);//works! writes to firebase!!
       console.log($cookies.get('blocChatCurrentUser'));
       console.log(newMessage);
       console.log(home.currentRoom$id);
 //error: home is not defined
-    }
+}
+*/
 
     //this command should be 'push' b/c from here we're pushing to the firebase array
     // can we use messages.add(message) to write to fb like we did for new rooms?
