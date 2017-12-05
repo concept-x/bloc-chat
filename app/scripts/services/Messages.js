@@ -11,7 +11,8 @@
       //chain .orderByChild and .equalTo methods to firebaseArray ref to target a specific room by its roomID
     }
 
-Message.push = function(newMessage, activeRoom, userName, stringDate){
+Message.push = function(newMessage, activeRoom){
+  //remove userName & StringDate b/c we're not passing those in; we're pulling them
     var now = new Date;
     var stringDate = now.toDateString();
 

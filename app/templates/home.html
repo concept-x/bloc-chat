@@ -31,7 +31,7 @@
     <p>{{message.sentAt | date}}</p><!--also style -->
   </div>
   <div class="msg-input" ><!--New Message input--><!--See Alicea angular course s4 l18 re: two-way binding...maybe I can declare a ng-model here and interpolate?? probably not because writing to firebase isn't the same as writing to the template.-->
-    <form ng-controller="HomeCtrl as home" ng-submit="home.sendMessage(newMessage)">
+    <form ng-controller="HomeCtrl as home" ng-submit="home.pushMessage(newMessage, home.currentRoom.$id)">
       <label for="msg-input">Your message here</label>
       <textarea rows="8" cols="20" name="newMessage" ng-model="newMessage" ></textarea><br />
       <input type="submit" value="Post!" >

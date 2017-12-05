@@ -6,7 +6,9 @@
       //pull userName from text in cookie
       $scope.greeting = "Bloc Chat Home Page!!!";
       //everything made in this controller must be inside this function, or else no accessibility
-      $scope.activeRoom = null;//set activeRoom initially to null; user should click on the room they want to see. Then why is view defaulting to viewing the msgs in Tool?
+      this.currentRoom = null;
+          //set activeRoom = this.currentRoom so activeRoom value never changes, no matter the context
+      //set activeRoom initially to null; user should click on the room they want to see. Then why is view defaulting to viewing the msgs in Tool?
 //probably because those are the only messages in the db atm...but no they're not...they're the only ones associated with a room, though.
 
       this.setCurrentRoom = function(room){
@@ -20,16 +22,14 @@
 //should I put a watcher on my scope so I can push the messages to firebase *and* have them show up in my currentRoom?
         //checkpoint 6:create alias inside homectrl that refers to method in messages.js to push/send messages to firebase
 
-
-      //  this.pushMessage = Message.send;
       //^^I don't think this is right
 //command to write message to firebase = Message.send fn in Messages.js
       }
-
-      this.sendMessage = function(message){
-        Message.push(message, $scope.activeRoom);
+      this.pushMessage = Message.push;
+      /*this.sendMessage = function(message){
+        Message.push(message, activeRoom);*/
 //changing activeRoom to currentRoom = null vs. undefined
-      }//when in a Controller use 'this' to reference the Controller object...
+      //}//when in a Controller use 'this' to reference the Controller object...
        //...the messages in HomeCtrl are saved in the messages property...
         //  var stringDate = Date.now().toDateString(); as suggested by Brady Sutton, throws error in Messages.js and breaks layout here.
     }//$scope = obj that lives in controller that we have access to in template.
