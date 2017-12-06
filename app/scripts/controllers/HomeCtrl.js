@@ -19,11 +19,6 @@
         console.log("This is the room id I passed to getRoomById: ", this.currentRoom.$id);
         this.messages = Message.getByRoomId(this.currentRoom.$id);
 
-//should I put a watcher on my scope so I can push the messages to firebase *and* have them show up in my currentRoom?
-        //checkpoint 6:create alias inside homectrl that refers to method in messages.js to push/send messages to firebase
-
-      //^^I don't think this is right
-//command to write message to firebase = Message.send fn in Messages.js
       }
       this.pushMessage = Message.push;
       /*this.sendMessage = function(message){
@@ -37,5 +32,5 @@
     angular
         .module('blocChatEe')
         .controller('HomeCtrl', ['Room', 'Message', '$scope', '$cookies', HomeCtrl]);
-        //injecting $uibModal into array will break layout
+
 })();

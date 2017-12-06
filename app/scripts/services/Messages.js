@@ -23,20 +23,10 @@ Message.push = function(newMessage, activeRoom){
     		time: stringDate
       }
       messages.$add(messageObject);
+  
     	};
 
 
-
-  /*
-    var messageObject = {
-      content: newMessage,
-      roomId: home.currentRoom$id,
-      user: 'blocChatCurrentUser',
-      sentAt: Date.now().toDateString()
-    }
-    console.log(messageObject);
-    messages.$add(messageObject);
-*/
 /*
     Message.push = function(newMessage, activeRoom, blocChatCurrentUser,  userName){
       messages.$add(newMessage);//works! writes to firebase!!
